@@ -9,7 +9,13 @@ function App() {
 
 
   const addvalue = () => {
+    if( c < 20)
     setc(c = c + 1)
+  } 
+
+    const removevalue = () => {
+      if( c >= 1)
+    setc(c = c - 1)
   } 
 
 
@@ -22,7 +28,9 @@ function App() {
       >Add Value</button>
       <br />
       <br />
-      <button>Remove value {c} </button>
+      <button
+      onClick = {removevalue}
+      >Remove value </button>
     </>
   )
 }
