@@ -1,0 +1,45 @@
+
+import './App.css'
+
+function App() {
+
+
+  return (
+    <>
+      <h1>Welcome to Components Use Example</h1>
+      <h3>Course Details</h3>
+      <Student name="Iftekhar"age= "23" ></Student>
+      <Teacher name="Wasif Reza" subject="CSE438"></Teacher>
+
+    </>
+  )
+}
+
+function Student(props){
+  return(
+    <div style={{
+      border: '2px solid salmon' ,
+      borderRadius : '10px',
+      margin: '5px'
+    }}>
+    <p>Name: {props.name} </p>
+    <p>Age: {props.age} </p>
+    </div>
+
+  )
+}
+
+function Teacher(props){
+  return(
+    <div style={{
+      border: '2px solid green',
+      borderRadius: "10px",
+      margin: '5px'
+    }}>
+      <p>Name: {props.name}</p>
+      <p>Subject: {props.subject}</p>
+    </div>
+  )
+}
+
+export default App
