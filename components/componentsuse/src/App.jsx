@@ -1,4 +1,6 @@
-
+import Hungry from './Hungry'
+import Library from './Library' 
+import Books from './Books';
 import './App.css'
 
 function App() {
@@ -10,8 +12,28 @@ function App() {
       <h3>Course Details</h3>
       <Student name="Iftekhar"age= "23" ></Student>
       <Teacher name="Wasif Reza" subject="CSE438"></Teacher>
+      <Player name="Mushi" runs="10000" ></Player>
+      <Hungry hungry="Yes" Do="Eat" ></Hungry>
+      <Hungry hungry="No" Do="Sleep" ></Hungry>
+      <Books></Books>
+      <Library></Library>
+
+
 
     </>
+  )
+}
+
+function Player({name,runs}){
+  return(
+    <div style={{
+      border: '2px solid gray' ,
+      borderRadius : '10px',
+      margin: '5px'
+    }}>
+      <p>Player Name : {name} </p>
+      <p>Player Runs : {runs}</p>
+    </div>
   )
 }
 
