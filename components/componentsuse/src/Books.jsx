@@ -10,7 +10,6 @@ const books = [
 export { books };
 
 function Book({ title, price, author, onBuy }) {
-  // local handler (method 2)
   function handleLocalClick() {
     alert(`Local handler clicked: ${title}`);
   }
@@ -19,8 +18,6 @@ function Book({ title, price, author, onBuy }) {
     <li style={{ marginBottom: 8 }}>
       {title} — {price} — {author}
       {" "}
-
-      {/* Method 1: inline arrow function (JS-style) */}
       <button
         onClick={() => alert(`Inline click: ${title}`)}
         style={{ marginLeft: 8 }}
@@ -28,12 +25,10 @@ function Book({ title, price, author, onBuy }) {
         Inline
       </button>
 
-      {/* Method 2: named local handler */}
       <button onClick={handleLocalClick} style={{ marginLeft: 8 }}>
         Local Handler
       </button>
 
-      {/* Method 3: handler passed from parent; using bind to pass arg */}
       <button onClick={onBuy.bind(null, title)} style={{ marginLeft: 8 }}>
         Parent (bind)
       </button>
@@ -42,7 +37,6 @@ function Book({ title, price, author, onBuy }) {
 }
 
 export default function Books() {
-  // parent handler (method 3 receiver)
   function handleBuyFromParent(title) {
     alert(`Parent handler received: ${title}`);
   }

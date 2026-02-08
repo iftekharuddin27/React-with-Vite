@@ -1,4 +1,5 @@
 import Hungry from './Hungry'
+import Counter from './usecase';
 import Library from './Library' 
 import Books from './Books';
 import './App.css'
@@ -17,6 +18,7 @@ function App() {
       <Hungry hungry="No" Do="Sleep" ></Hungry>
       <Books></Books>
       <Library></Library>
+      <Counter></Counter>
 
 
 
