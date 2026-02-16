@@ -44,7 +44,8 @@ function UserListApp() {
               borderRadius: '8px', 
               padding: '15px', 
               marginBottom: '10px',
-              backgroundColor: '#f9f9f9'
+              backgroundColor: 'orange',
+              color: 'white'
             }}
           >
             <p style={{ margin: '5px 0' }}><strong>Name:</strong> {user.name}</p>
